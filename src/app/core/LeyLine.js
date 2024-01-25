@@ -14,7 +14,7 @@ export default class LeyLines extends Component {
             color: { primary: '#43a047', secondary: '#81c784' },
             history: [],
             irminsul: {
-                name: 'irminsul',
+                name: 'Untitled',
                 config: {
                     color: { primary: '#43a047', secondary: '#81c784' },
                 },
@@ -31,8 +31,8 @@ export default class LeyLines extends Component {
                         }
                     },
                     'a306d40e-93d2-11ed-a1eb-0242ac120002': {
-                        name: 'Read Me',
-                        content: 'Example text.',
+                        name: 'README',
+                        content: '<p style=\\"margin-left:0px;\\">Dear Users,</p><p style=\\"margin-left:0px;\\">&nbsp;</p><p style=\\"margin-left:0px;\\">Discover the enhanced features of <strong>Akasha</strong>, your go-to app for seamless data encryption and decryption. Think of it as a sophisticated digital notebook, where your data is organized in a tree-like structure.</p><p style=\\"margin-left:0px;\\">While it may resemble traditional folders and files, <strong>Akasha </strong>takes a unique approach by treating these entities as nodes that can function as both folders and files simultaneously.</p><p style=\\"margin-left:0px;\\">By default, we\'ve set up a <strong>Parent Node</strong> and a <strong>Child Node</strong>. The <strong>Parent Node</strong> appears as a folder housing the <strong>Child Node</strong> as a file. However, upon clicking the <strong>Parent Node</strong>, you\'ll find that it not only serves as a container for the <strong>Child Node</strong> but also stores content like a file.</p><p style=\\"margin-left:0px;\\">Embark on an exploration of <strong>Akasha</strong>\'s capabilities, and unveil a world where versatility meets security!</p><p style=\\"margin-left:0px;\\">&nbsp;</p><p style=\\"margin-left:0px;\\">Best Regards,<br><i>lhinxue</i></p>',
                         _: {}
                     }
                 }

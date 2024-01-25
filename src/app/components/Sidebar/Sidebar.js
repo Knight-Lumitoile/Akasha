@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import {Box, Typography} from "@mui/material";
 import { useContext, useState } from "react";
 import { LeyLine } from "../../core/LeyLine";
 import sys from "../../core/sys";
@@ -86,10 +86,8 @@ export default function Sidebar() {
                         display: 'flex',
                         flexDirection: 'row',
                         fontSize: '1.2rem',
-                        fontVariant: 'small-caps',
                         height: '34px',
                         justifyContent: 'space-between',
-                        letterSpacing: '.2rem',
                         lineHeight: '34px',
                         marginBottom: '5px',
                         padding: '0 10px',
@@ -135,10 +133,8 @@ export default function Sidebar() {
                         display: 'flex',
                         flexDirection: 'row',
                         fontSize: '1rem',
-                        fontVariant: 'small-caps',
                         height: '34px',
                         justifyContent: 'space-between',
-                        letterSpacing: '.2rem',
                         lineHeight: '34px',
                         padding: '0 10px',
                         margin: '0'
@@ -170,10 +166,8 @@ export default function Sidebar() {
                         display: 'flex',
                         flexDirection: 'row',
                         fontSize: '1rem',
-                        fontVariant: 'small-caps',
                         height: '34px',
                         justifyContent: 'space-between',
-                        letterSpacing: '.2rem',
                         lineHeight: '34px',
                         padding: '0 10px',
                         margin: '0'
@@ -237,6 +231,9 @@ export default function Sidebar() {
                 </Box>
             </Box>
             <DisplayDialog on={aboutAkasha} onClose={() => _aboutAkasha(false)} title={'About Akasha'}>
+                <Typography>
+                    Copyright 2023 @lhinxue All Right Reserved
+                </Typography>
             </DisplayDialog>
         </>
 

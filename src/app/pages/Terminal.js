@@ -1,10 +1,9 @@
-import { Box, Input, InputAdornment, Step, StepContent, StepLabel, Stepper } from '@mui/material';
-import { useContext, useEffect, useState } from 'react';
+import {Box, Input, InputAdornment, Step, StepContent, StepLabel, Stepper} from '@mui/material';
+import {useContext, useEffect, useState} from 'react';
 import IconButton from '../components/Button/IconButton';
 import Letter from '../components/Icon/Letter';
 import Remix from '../components/Icon/Remix';
-import Message from '../components/LX/Message';
-import { LeyLine } from '../core/LeyLine';
+import {LeyLine} from '../core/LeyLine';
 import sys from '../core/sys';
 import Page from '../templates/Page';
 
@@ -167,24 +166,24 @@ export default function Terminal() {
 
     return (
         <Page defaultColor>
-            <Message on text='nimama' type={1} loading/>
+            {/*<Message on text='nimama' type={1} loading/>*/}
             <Box sx={sx}>
                 <Box className='Logo'>
                     <svg xmlns='http://www.w3.org/2000/svg' viewBox='-20 -29 40 60'>
-                        <path d='M 0 -2 L -7 -10 L 0 -29 L 7 -10 Z' />
-                        <path d='M 0 2 L -7 10 L 0 31 L 7 10 Z' />
-                        <path d='M -1 0 L -9 -8 L -20 0 L -9 8 Z' />
-                        <path d='M 1 0 L 9 -8 L 20 0 L 9 8 Z' />
+                        <path d='M 0 -2 L -7 -10 L 0 -29 L 7 -10 Z'/>
+                        <path d='M 0 2 L -7 10 L 0 31 L 7 10 Z'/>
+                        <path d='M -1 0 L -9 -8 L -20 0 L -9 8 Z'/>
+                        <path d='M 1 0 L 9 -8 L 20 0 L 9 8 Z'/>
                     </svg>
                 </Box>
                 <Box className='Name'>
                     <div>
-                        <Letter.A />
-                        <Letter.K />
-                        <Letter.A />
-                        <Letter.S />
-                        <Letter.H />
-                        <Letter.A />
+                        <Letter.A/>
+                        <Letter.K/>
+                        <Letter.A/>
+                        <Letter.S/>
+                        <Letter.H/>
+                        <Letter.A/>
                     </div>
                 </Box>
                 <Box className='Form'>
@@ -193,17 +192,23 @@ export default function Terminal() {
                             <StepLabel onClick={() => _activeStep(0)}>
                                 {filename === '' ? 'Select File to Upload' : filename}
                             </StepLabel>
-                            <StepContent className='StepperContent' >
+                            <StepContent className='StepperContent'>
                                 <Input
                                     disabled
                                     value={filename}
                                     endAdornment={
-                                        <InputAdornment position='end' >
+                                        <InputAdornment position='end'>
                                             <IconButton component='label' icon={<>
-                                                <input hidden type='file' accept='.irminsul' onChange={onFileSelect} />
-                                                <Remix.upload fontSize='small' />
-                                            </>} />
-                                            <IconButton disabled={filename === ''} icon={<Remix.arrowRightCircle fontSize='small' />} onClick={stepAhead} />
+                                                <input hidden type='file' accept='.irminsul' onChange={onFileSelect}/>
+                                                <Remix.upload fontSize='small'/>
+                                            </>}
+
+                                                        tooltip={"Upload File"}
+                                            />
+                                            <IconButton disabled={filename === ''} icon={<Remix.arrowRightCircle fontSize='small'/>}
+                                                        onClick={stepAhead}
+                                            tooltip={"Next Step"}
+                                            />
                                         </InputAdornment>
                                     }
                                 />
@@ -221,17 +226,21 @@ export default function Terminal() {
                                     endAdornment={
                                         <InputAdornment position='end'>
                                             <IconButton
-                                                icon={showPassword ? <Remix.eye fontSize='small' /> : <Remix.eyeOff fontSize='small' />}
+                                                icon={showPassword ? <Remix.eye fontSize='small'/> : <Remix.eyeOff fontSize='small'/>}
                                                 onClick={() => _showPassword(pre => !pre)}
+                                                tooltip={"Show / Hide Password"}
                                             />
-                                            <IconButton icon={<Remix.arrowRightCircle fontSize='small' />} onClick={unlockIrminsul} />
+                                            <IconButton icon={<Remix.arrowRightCircle fontSize='small'/>} onClick={unlockIrminsul}
+                                                        tooltip={"Next Step"}/>
                                         </InputAdornment>
                                     }
                                 />
                             </StepContent>
                         </Step>
                     </Stepper>
-                    <IconButton className='Escape' icon={<Remix.close />} onClick={escapeUnlock} />
+                    <IconButton className='Escape' icon={<Remix.fileLock/>} onClick={escapeUnlock}
+                                tooltipPosition={"left"}
+                                tooltip={"Create New / Keep Editing"}/>
                 </Box>
             </Box>
         </Page>

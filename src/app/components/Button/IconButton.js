@@ -33,7 +33,7 @@ export default function IconButton({
     }
 
     return tooltip ?
-        <Tooltip title={tooltip} placement={tooltipPosition} arrow enterDelay={1000}>
+        <Tooltip title={tooltip} placement={tooltipPosition} arrow>
             <Button className={className} disabled={disabled} component={component} color={gray ? 'default' : on === true ? 'secondary' : on === false ? 'primary' : 'primary'} onClick={onClick} sx={sx} >
                 {icon}
             </Button>

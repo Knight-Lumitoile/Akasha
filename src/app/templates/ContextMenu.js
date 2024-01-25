@@ -28,8 +28,6 @@ export default function ContextMenu({
         '& ul>li': {
             borderBottom: '1px solid silver',
             fontSize: 13,
-            fontVariant: 'small-caps',
-            letterSpacing: '.1em',
             padding: '1px 5px 3px 10px',
         },
         '& ul>li:last-child': {

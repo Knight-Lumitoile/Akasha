@@ -124,7 +124,7 @@ export default function Editor() {
             display: 'flex',
             flexDirection: 'row',
             height: '70px',
-            justifyContent: 'space-between',
+            justifyContent: 'center',
             width: '100%',
             '&>div': {
                 margin: '0 5px'
@@ -176,9 +176,9 @@ export default function Editor() {
     return (
         <ReadOnly className={'Editor'} sx={sx} readOnly={readOnly}>
             <Box className={'Header'}>
-                <Box>
-                    <IconButton icon={<Remix.save />} tooltip={'Save'} tooltipPosition={'left'} />
-                </Box>
+                {/*<Box>*/}
+                {/*    <IconButton icon={<Remix.save />} tooltip={'Save'} tooltipPosition={'left'} />*/}
+                {/*</Box>*/}
                 <Breadcrumbs className='Breadcrumbs' separator='·'>
                     {
                         os.getNodePath(api.node).map(
@@ -188,9 +188,9 @@ export default function Editor() {
                         )
                     }
                 </Breadcrumbs>
-                <Box>
-                    <IconButton icon={<Remix.edit />} tooltip={'Start Editing'} tooltipPosition={'bottom'} />
-                </Box>
+                {/*<Box>*/}
+                {/*    <IconButton icon={<Remix.edit />} tooltip={'Start Editing'} tooltipPosition={'bottom'} />*/}
+                {/*</Box>*/}
             </Box>
             <CKEditor
                 editor={Ckeditor}
